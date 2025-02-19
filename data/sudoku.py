@@ -158,7 +158,7 @@ class Othello:
     
 def get_ood_game(_):
     tbr = []
-    ab = OthelloBoardState()
+    ab = SudokuBoardState()
     possible_next_steps = ab.get_valid_moves()
     while possible_next_steps:
         next_step = random.choice(possible_next_steps)
@@ -170,7 +170,7 @@ def get_ood_game(_):
 def get(ood_perc=0., data_root=None, wthor=False, ood_num=1000):
     return Othello(ood_perc, data_root, wthor, ood_num)
     
-class OthelloBoardState():
+class SudokuBoardState():
     # 1 is black, -1 is white
     def __init__(self, board_size = 8):
         self.board_size = board_size * board_size
