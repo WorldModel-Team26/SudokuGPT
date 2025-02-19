@@ -16,6 +16,8 @@ from matplotlib.colors import ListedColormap
 import matplotlib.patches as mpatches
 from matplotlib.colors import LinearSegmentedColormap
 
+#sd
+
 rows = list("abcdefgh")
 columns = [str(_) for _ in range(1, 9)]
 
