@@ -58,9 +58,9 @@ def permit_reverse(integer):
 start_hands = [permit(_) for _ in ["d5", "d4", "e4", "e5"]]
 eights = [[-1, 0], [-1, 1], [0, 1], [1, 1], [1, 0], [1, -1], [0, -1], [-1, -1]]
 
-wanna_use = "othello_synthetic"
+wanna_use = "sudoku_synthetic"
 
-class Othello:
+class Sudoku:
     def __init__(self, ood_perc=0., data_root=None, wthor=False, ood_num=1000):
         # ood_perc: probability of swapping an in-distribution game (real championship game)
         # with a generated legit but stupid game, when data_root is None, should set to 0
@@ -168,7 +168,7 @@ def get_ood_game(_):
     return tbr
     
 def get(ood_perc=0., data_root=None, wthor=False, ood_num=1000):
-    return Othello(ood_perc, data_root, wthor, ood_num)
+    return Sudoku(ood_perc, data_root, wthor, ood_num)
     
 class SudokuBoardState():
     # 1 is black, -1 is white
